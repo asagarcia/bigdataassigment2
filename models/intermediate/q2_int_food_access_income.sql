@@ -7,7 +7,7 @@ SELECT
   a.lahisphalfshare,
   t.MedianFamilyIncome,
   t.PovertyRate
-FROM {{ ref('stg_access_and_demographics') }} a
-INNER JOIN {{ ref('stg_tract_data') }} t
+FROM {{ ref('q2_stg_access_and_demographics') }} a
+INNER JOIN {{ ref('q2_stg_tract_data') }} t
   ON a.CensusTract = t.CensusTract
   
